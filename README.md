@@ -29,6 +29,21 @@ hale). Før vi går ut av forløkken vil halen være siste p. Som dermed har en 
 Metodene int antall() og boolean tom(). Den første skal returnere antallet verdier i listen (return antall) og den andre 
 skal returnere true/false avhengig av om listen er tom eller ikke (return antall == 0).
 
+Oppgave 2:
+a) Oppgaven går ut på treversere gjennom en lenket liste. Metoden toString() traverserer fra hode til hale ved hjelp av 
+neste-pekere. Metoden returnerer [] hvis listen er tom, hvir listen innenholder bare en verdi returener metoden den ene 
+verdien i klam parantesene, eller flere verdier i klam parantesene. Metoden omvendtString() gjør det samme som toString(),
+men denne gangen traversering skjer fra hale til hode ved hjelp av forrige-pekere.
+
+b) Oppgaven går ut på å legge inn ny node med ny verdi og returnere true hvis inleging var vellykket.
+Metoden må oppfylle to hovedkravene. 
+1. Hvis det er første node som settes i en tom liste skal både hode og hale sin peker (både forrige og este peker) 
+peke til null.
+2. I den andre tillfelle legges den nye node bakest i lista, og hale.neste skal peke nå til den nye noden
+3. Antall noder økes siden vi har en ny node i lenket liste
+
+Koden er tatt fra kompendie og er veldokkumentert i kommentarene i selve oppgaven. Koden var laget til en løsning til
+enkelt lenked liste,men jeg omjorde den til dobell leket liste
 
 * Oppgave 3:
 3a:
@@ -38,6 +53,16 @@ Den første if setningen flytter seg indeks antall ganger til riktig node, mens 
 starter fra halen beveger seg (antall-indeks) antall ganger.
 
 Metodene oppdater() og hent() er lånt fra kompendiets programkode 3.3.3 b)
+
+Oppgave 4:
+Oppgaven går ut på å loope gjennom listen. Metoden int indeksTil(T verdi) tar imot en verdi og prøver å finne den i listen.
+Looping starter fra hode til lenket liste. I loppen har vi en if settning som sammenligner oppgit verdi med node sin verdi. 
+Hvis det stemmer, får vi i retur index av noden der verdien ble funnet, hvis ikke fortsetter vi videre.
+Hvis verdien finnes ikke i listen vår returnerer medoden -1.
+
+Metoden public boolean inneholder(T verdi) rett og slett returnerer true hvis verdien er funnet i listen og false hvis ikke.
+
+Koden er også tatt fra kompendiet, og er veldig godt kommentert i selve koden
 
 * Oppgave 7:
 

@@ -114,7 +114,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     }
 
     // Koden er tatt fra kompendiet seksjon 3.3.2  Programkode 3.3.2 f)
-    // Jeg har bar omgjorde den til dobbel lenke liste
+    // Jeg omgjorde den til dobbel lenke liste
     @Override
     public boolean leggInn(T verdi) {
         Objects.requireNonNull(verdi, "Ikke tillatt med null-verdier!");
@@ -202,7 +202,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     }
 
     /*      Oppgave 4
-    Oppgaven er tatt fra løsningsforslag Avsnitt 3.3.3   oppgave 2 i kompendiet
+    OpOppgaven er tatt fra løsningsforslag Avsnitt 3.3.3   oppgave 2 i kompendiet
     kaller på metoden indeksTil() og sjekker om verdien finnes
     hvis inteksTil() innenholder ønsket verdien returneres true, hvis ikke da retuneres false*/
     @Override
