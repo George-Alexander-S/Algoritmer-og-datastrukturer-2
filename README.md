@@ -21,6 +21,10 @@ Oppgaven er levert av følgende studenter:
 
 # Oppgavebeskrivelse
 
+Metodene er i kildekodekommentarer navngitt som følgende eksempel: // Oppgave 5
+
+Dette for å lettere kunne finne frem i koden med søkefunksjonen.
+
 * Oppgave 1:
 
 Oppgave 1: Konstruktøren DobbeltLenketListe(T[] a) kastes requireNonNull-metode når tabell a er tom. 
@@ -86,3 +90,13 @@ til den oppgitte indeksen. Konstruktøren her en nesten identisk med dobbeltLenk
 
 I 8D lages først metoden Iterator <T> iterator(int indeks). Her skjekkes det at indeksen er lovlig
 ved bruk av metoden indeksKontroll(). Deretter returnerer metoden en instans av iterator klassen.
+
+* Oppgave 10:
+
+Denne metoden ble løst med en hjelpevariabel for antallet inversjoner i listen. Denne finnes med en for-løkke.
+
+Deretter vil en while kjøre gjennom og sortere tabellen med compare. Verdi(i) sammenlignes med verdi(i-1). Dersom de var invertert, bytter de plass.
+
+Når man har vært gjennom listen, resettes inversjoner telleren, og man vil igjen kjøre gjennom listen og sjekke om det er inversjoner. Såfremt det er inversjoner i listen
+vil while løkken fortsette til den er ferdigsortert.
+
