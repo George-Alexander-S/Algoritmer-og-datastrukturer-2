@@ -169,7 +169,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
                 hale = hode;
             }
             else {
-                hode = new Node<T> (verdi, null, hode);                       // Dersom listen ikke er tom, må nye nodens neste peker, peke på gamle hodet.
+                hode = new Node<T> (verdi, null, hode);                       // Innlegg til hode denne gangen dersom listen ikke er tom. Her må nye nodens neste peker, peke på gamle hodet.
                 hode.neste.forrige = hode;                                          // Må huske å gi gamle hodet en forrige peker
             }
         }
@@ -227,14 +227,14 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     @Override
     public T oppdater(int indeks, T nyverdi) { //kildekode inspirert fra kompendium 3.3.3.b
 
-       Objects.requireNonNull(nyverdi, "Ikke tilatt med null verdier!");
-       indeksKontroll(indeks, false);
+        Objects.requireNonNull(nyverdi, "Ikke tilatt med null verdier!");
+        indeksKontroll(indeks, false);
 
-       Node<T> p = finnNode(indeks);
-       T gammelVerdi = p.verdi;
-       p.verdi = nyverdi;
-       endringer++;
-       return gammelVerdi;
+        Node<T> p = finnNode(indeks);
+        T gammelVerdi = p.verdi;
+        p.verdi = nyverdi;
+        endringer++;
+        return gammelVerdi;
     }
 
     // Oppgave 6
@@ -268,7 +268,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         else if (q == hale) {   // Hvis halen er verdien som skal fjernes
             hale = hale.forrige;
             hale.neste = null;
-            }
+        }
         else {                  // Hvis verdien ikke er i halen
             q.forrige.neste = q.neste;
             q.neste.forrige = q.forrige;
@@ -406,7 +406,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         return new DobbeltLenketListeIterator();  //instans av iterator klassen
     }
 
-    //8D
+    //8D Kildekode delvis inspirert fra komepdium 3.2.5.d
     public Iterator<T> iterator(int indeks) {
         indeksKontroll(indeks, false); //Skjekker om indeksen er lovlig
         return new DobbeltLenketListeIterator(indeks); // retur instans av iteratorklassen
@@ -432,6 +432,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         }
 
         @Override
+        //hasNext() ferdigkodet
         public boolean hasNext()
         {
             return denne != null;
@@ -455,6 +456,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         }
 
 
+        // Oppgave 9
         @Override
         // Vi tok utgangspunkt i kompendiets programkode 3.3.4 d) - Måtte en del endringer til for å fungere med en slik oppgaven ønsket.
         // "denne" er fra iteratoren og vil være noden til høyre for den som skal fjernes. Altså p fra oppgaveteksten.
@@ -505,7 +507,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         int inversjoner = 0;                            //  Lager en variabel for antall inversjoner
         for (int i = 1; i < liste.antall(); i++) {      // Før vi sjekker for antallet inversjoner med en for-løkke
             if (c.compare(liste.hent(i), liste.hent(i-1)) < 0) {    // Hvis første er mindre enn neste
-                    inversjoner ++;                     // Inkrementerer inversjoner
+                inversjoner ++;                     // Inkrementerer inversjoner
             }
         }
         while (inversjoner > 0) {                       //  Deretter kjører vi gjennom og sorterer tabellen en og en verdi
@@ -513,16 +515,16 @@ public class DobbeltLenketListe<T> implements Liste<T> {
                 T fjerntemp;                            // Oppretter et par hjelpevariabler for å holde på verdiene
                 T hent;
                 if (c.compare(liste.hent(i), liste.hent(i-1)) < 0) { // Hvis første argument er mindre enn neste:
-                        fjerntemp = liste.fjern(i);                         //  så bytter de plass.
-                        hent = liste.hent(i-1);
-                        liste.leggInn(i, hent);
-                        liste.oppdater(i-1, fjerntemp);
+                    fjerntemp = liste.fjern(i);                         //  så bytter de plass.
+                    hent = liste.hent(i-1);
+                    liste.leggInn(i, hent);
+                    liste.oppdater(i-1, fjerntemp);
                 }
             }
             inversjoner = 0;                                    // Så resettes inversjoner telleren til 0
             for (int i = 1; i < liste.antall(); i++) {          // Før vi igjen går gjennom og sjekker antall inversjoner
                 if (c.compare(liste.hent(i), liste.hent(i-1)) < 0) {
-                        inversjoner ++;
+                    inversjoner ++;
                 }
             }
         }    // While løkken vil da fortsette så lenge det er inversjoner igjen i listen. Ikke vakkert, men det funker.
