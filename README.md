@@ -86,3 +86,19 @@ til den oppgitte indeksen. Konstruktøren her en nesten identisk med dobbeltLenk
 
 I 8D lages først metoden Iterator <T> iterator(int indeks). Her skjekkes det at indeksen er lovlig
 ved bruk av metoden indeksKontroll(). Deretter returnerer metoden en instans av iterator klassen.
+
+* Oppgave 9:
+Vi tok utgangspunkt i kompendiets programkode 3.3.4 d). 
+Vi måtte innføre en del endringer til for å fungere koden med en slik oppgaven ønsket.
+"denne" er fra iteratoren og vil være noden til høyre for den som skal fjernes. Altså p fra oppgaveteksten.
+
+Vi sjekker om de to endringsvariablene (endringer og iteratorendringer) er like. Hvis ikke kastes en
+ConcurrentModificationException. På slutten av koden skal begge endringsvariablene økes med 1. 
+Dermed vil de fortsatt være like etter et kall på remove. Her sjekker vi også fjernOk hvis  det  ikke  er  tillatt  
+å  kalle  denne  metoden,  skal  det  kastes  en  IllegalStateException. Dersom disse hindrene oppe passeres, settes fjernOK til false.
+
+Dersom antall er lik 1 vil den eksisterende noden (som skal fjernes) være både hode og hale samtidig, å nulles begge.
+Dersom den første skal fjernes (i en liste med mer enn 1 element) så må hode oppdateres.
+Hvis  en  node  inne  i  listen  skal  fjernes så itererer det til riktig plass på listen. 
+Dersom det som skal fjernes ikke er halen så må pekerne i nodene på hver side oppdateres. Dersom denne er lik null, 
+har "denne" blitt skjøvet ut av listen sine grenser, da vet vi at det som skal fjernes er halen.
