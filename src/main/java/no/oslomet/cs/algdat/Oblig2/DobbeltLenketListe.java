@@ -169,7 +169,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
                 hale = hode;
             }
             else {
-                hode = new Node<T> (verdi, null, hode);                       // Dersom listen ikke er tom, må nye nodens neste peker, peke på gamle hodet.
+                hode = new Node<T> (verdi, null, hode);                       // Innlegg til hode denne gangen dersom listen ikke er tom. Her må nye nodens neste peker, peke på gamle hodet.
                 hode.neste.forrige = hode;                                          // Må huske å gi gamle hodet en forrige peker
             }
         }

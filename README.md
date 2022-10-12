@@ -46,6 +46,13 @@ finnNode() Er løst med 2 if setninger, for å avgjøre hvor indeksen er ift mid
 Metodene oppdater() og hent() er lånt fra kompendiets programkode 3.3.3 b)
 
 
+* Oppgave 5:
+
+Løsningen her brukte kompendiets programkode 3.3.2 g) som utgangspunkt. Den ble tilpasset dobbel lenkede lister (bakoverpekere).
+Pekerne var følgelig det som gav mest hodebry. Et annet sentralt element var også å skille ut tilfellene der man setter inn en node i en tom tabell, kontra en tabell med innhold.
+
+Ytterligere detaljer er å finne i kildekodekommentarene.
+
 * Oppgave 7:
 
 I oppgave 7 ble vi bedt om å tømme listen på 2 måter og velge den måten som er mest effektivt.
