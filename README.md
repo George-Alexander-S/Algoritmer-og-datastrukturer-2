@@ -68,6 +68,16 @@ a):
 finnNode() Er løst med 2 if setninger, for å avgjøre hvor indeksen er ift midten. Den første if setningen flytter seg indeks antall ganger til riktig node, mens den andre som starter fra halen beveger seg (antall-indeks) antall ganger.
 Metodene oppdater() og hent() er lånt fra kompendiets programkode 3.3.3 b)
 
+b):
+
+Her instansierer vi en liste av DobbeltLenketListe, bruker fratilKontroll() for å sjekke at intervallet er gyldig.
+Dersom lengden er mindre enn 1 så returneres det kun en tom liste med en gang.
+
+Ellers startes enn ny liste med variablene p, med fra verdien. En for-løkke itererer til men ikke med "til" og legger inn resten av verdiene.
+
+Deretter returneres listen.
+
+
  * Oppgave 4:
 
 Oppgaven går ut på å loope gjennom listen. Metoden int indeksTil(T verdi) tar imot en verdi og prøver å finne den i listen.
@@ -85,6 +95,20 @@ Koden er også tatt fra kompendiet, og er veldig godt kommentert i selve koden
 
 Løsningen her brukte kompendiets programkode 3.3.2 g) som utgangspunkt. Den ble tilpasset dobbel lenkede lister (bakoverpekere).
 Pekerne var følgelig det som gav mest hodebry. Et annet sentralt element var også å skille ut tilfellene der man setter inn en node i en tom tabell, kontra en tabell med innhold.
+
+Ytterligere detaljer er å finne i kildekodekommentarene.
+
+
+* Oppgave 6:
+
+Her skulle vi lage 2 fjern metoder. En boolean, som fjerner verdi og returnerer true - Samt en fjern som fjerner etter indeks og returnerer verdien.
+
+Boolean metoden finner verdien som skal fjernes med en while løkke (hvis den finnes). If/else setninger sørger for at vi fjerner riktig pekere for å dermed fjerne den aktuelle noden.
+Node uten pekere blir fjernet av javas garbage collection.
+
+Den andre metoden bruker en hjelpevariabel (temp) og resten løses med if/else setninger for å fjerne riktige pekere, utifra hvor noden ligger (hode/hale/kropp).
+
+Begge metodene tar også høyde for de tilfellene der hodet er eneste node i listen.
 
 Ytterligere detaljer er å finne i kildekodekommentarene.
 

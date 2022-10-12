@@ -256,7 +256,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         }
         else if (q == hode) {   // Hvis verdien som skal fjernes er i hodet.
 
-            if (antall == 1) {  // Hvis hode (og dermed hale) er det eneste på listen:
+            if (antall == 1) {  // Dersom hode er eneste node i listen (hode vil da også være halen)
                 hode = null;
                 hale = null;
             }
@@ -292,7 +292,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         if (indeks == 0) {              // Dersom hodet skal fjernes
             temp = hode.verdi;
 
-            if (antall == 1) {          // Dersom HODET ER ENESTE node i listen
+            if (antall == 1) {          // Dersom hode er eneste node i listen (hode vil da også være halen)
                 hode = null;
                 hale = null;
             }
