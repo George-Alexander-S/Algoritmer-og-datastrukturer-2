@@ -456,6 +456,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         }
 
 
+        // Oppgave 9
         @Override
         // Vi tok utgangspunkt i kompendiets programkode 3.3.4 d) - Måtte en del endringer til for å fungere med en slik oppgaven ønsket.
         // "denne" er fra iteratoren og vil være noden til høyre for den som skal fjernes. Altså p fra oppgaveteksten.
