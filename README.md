@@ -2,10 +2,10 @@
 
 Denne oppgaven er en innlevering i Algoritmer og Datastrukturer. 
 Oppgaven er levert av følgende studenter:
+* George Alexander Saavedra, s360536
 * Paula Sielawa, s364584
 * Suzane Mahmoud Hamze, s364759
 * Majda Ivic, s362095
-* George Alexander Saavedra, s360536
 
 # Arbeidsfordeling
 * Oppgave 1: Suzane, Paula og George
